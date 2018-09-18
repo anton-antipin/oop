@@ -48,6 +48,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Patterns\BehavioralPatterns\ChainOfResponsibilityTest.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\CommandTest.cs" />
     <Compile Include="Patterns\GeneratingPatterns\AbstractFatoryTest.cs" />
     <Compile Include="Patterns\GeneratingPatterns\BuilderTest.cs" />
     <Compile Include="Patterns\GeneratingPatterns\FactoryMethodTest.cs" />

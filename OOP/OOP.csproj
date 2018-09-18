@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="Patterns\BehavioralPatterns\ChainOfResponsibility.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\Command.cs" />
     <Compile Include="Patterns\GeneratingPatterns\AbstractFatory.cs" />
     <Compile Include="Patterns\GeneratingPatterns\Builder.cs" />
     <Compile Include="Patterns\GeneratingPatterns\FactoryMethod.cs" />

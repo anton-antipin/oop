@@ -59,6 +59,104 @@ namespace OOP.Patterns.BehavioralPatterns.ChainOfResponsibility
     #endregion
 
     #region PayTransfer
+    public class Receiver
+    {
+        public bool BankTransfer { get; set; }
+        public bool MoneyTransfer { get; set; }
+        public bool PayPalTransfer { get; set; }
 
+        public Receiver(bool bankTransfer, bool moneyTransfer, bool payPalTransfer)
+        {
+            BankTransfer = bankTransfer;
+            MoneyTransfer = moneyTransfer;
+            PayPalTransfer = payPalTransfer;
+        }
+    }
+
+    public abstract class PaymentHandler
+    {
+        public PaymentHandler Successor { get; set; }
+        public abstract string Handle(Receiver receiver);
+    }
+    public class BankPaymentHandler : PaymentHandler
+    {
+        public override string Handle(Receiver receiver)
+        {
+            string result = "";
+            if (receiver.BankTransfer)
+                result = "Выполняем банковский перевод";
+            else if (Successor != null)
+                result = Successor.Handle(receiver);
+
+            return result;
+        }
+    }
+    public class MoneyPaymentHandler : PaymentHandler
+    {
+        public override string Handle(Receiver receiver)
+        {
+            string result = "";
+
+            if (receiver.MoneyTransfer)
+                result = "Выполняем перевод через системы денежных переводов";
+            else if (Successor != null)
+                result = Successor.Handle(receiver);
+
+            return result;
+        }
+    }
+    public class PayPalPaymentHandler : PaymentHandler
+    {
+        public override string Handle(Receiver receiver)
+        {
+            string result = "";
+            if (receiver.PayPalTransfer)
+                result = "Выполняем перевод через PayPal";
+            else if (Successor != null)
+                result = Successor.Handle(receiver);
+
+            return result;
+        }
+    }
+    
+    public class COF_Example
+    {
+        private static COF_Example _instance;
+        private static readonly object _syncObj = new object();
+
+        private COF_Example()
+        {
+
+        }
+
+        public static COF_Example Instance
+        {
+            get
+            {
+                if(_instance == null)
+                {
+                    lock(_syncObj)
+                    {
+                        if (_instance == null)
+                            _instance = new COF_Example();
+                    }
+                }
+
+                return _instance;
+            }
+        }
+
+        public string Main(Receiver receiver)
+        {
+            PaymentHandler generalHandler = new BankPaymentHandler();
+            PaymentHandler moneyPaymentHandler = new MoneyPaymentHandler();
+            PaymentHandler payPalPaymentHandler = new PayPalPaymentHandler();
+
+            generalHandler.Successor = moneyPaymentHandler;
+            moneyPaymentHandler.Successor = payPalPaymentHandler;
+
+            return generalHandler.Handle(receiver);
+        }
+    }
     #endregion
 }
