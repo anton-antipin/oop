@@ -43,6 +43,10 @@
     <Compile Include="Main.cs" />
     <Compile Include="Patterns\BehavioralPatterns\ChainOfResponsibility.cs" />
     <Compile Include="Patterns\BehavioralPatterns\Command.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\Interpreter.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\Iterator.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\Mediator.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\Memento.cs" />
     <Compile Include="Patterns\GeneratingPatterns\AbstractFatory.cs" />
     <Compile Include="Patterns\GeneratingPatterns\Builder.cs" />
     <Compile Include="Patterns\GeneratingPatterns\FactoryMethod.cs" />

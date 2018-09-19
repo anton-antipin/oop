@@ -24,7 +24,7 @@ namespace OOP.Patterns.StructuralPatterns.Flyweight
 
         public override void Operation(int extrinsicState)
         {
-            
+            intrinsicState = extrinsicState;
         }
     }
     class UnsharedFlyweight : Flyweight
