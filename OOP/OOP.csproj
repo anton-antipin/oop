@@ -47,6 +47,11 @@
     <Compile Include="Patterns\BehavioralPatterns\Iterator.cs" />
     <Compile Include="Patterns\BehavioralPatterns\Mediator.cs" />
     <Compile Include="Patterns\BehavioralPatterns\Memento.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\Observer.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\State.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\Strategy.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\TemplateMethod.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\Visitor.cs" />
     <Compile Include="Patterns\GeneratingPatterns\AbstractFatory.cs" />
     <Compile Include="Patterns\GeneratingPatterns\Builder.cs" />
     <Compile Include="Patterns\GeneratingPatterns\FactoryMethod.cs" />

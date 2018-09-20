@@ -54,6 +54,11 @@
     <Compile Include="Patterns\BehavioralPatterns\IteratorTest.cs" />
     <Compile Include="Patterns\BehavioralPatterns\MediatorTest.cs" />
     <Compile Include="Patterns\BehavioralPatterns\MementoTest.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\ObserverTest.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\StateTest.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\StrategyTest.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\TemplateMethodTest.cs" />
+    <Compile Include="Patterns\BehavioralPatterns\VisitorTest.cs" />
     <Compile Include="Patterns\GeneratingPatterns\AbstractFatoryTest.cs" />
     <Compile Include="Patterns\GeneratingPatterns\BuilderTest.cs" />
     <Compile Include="Patterns\GeneratingPatterns\FactoryMethodTest.cs" />
